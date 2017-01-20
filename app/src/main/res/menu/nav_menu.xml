@@ -6,17 +6,22 @@
 
         <item android:id="@+id/storyclub"
               android:title="@string/campus_story"
-            />
+            android:icon="@drawable/ic_campus_story"/>
+
         <item android:id="@+id/notes"
               android:title="@string/notes"
+            android:icon="@drawable/ic_notes_black_24dp"
               />
 
         <item android:id="@+id/clubs"
               android:title="@string/student_club"
+            android:icon="@drawable/ic_pan_tool_black_24dp"
+
               />
         <item
             android:id="@+id/GQuasar"
             android:title="@string/GQuasar"
+            android:icon="@drawable/ic_insert_invitation_black_24dp"
            />
 
     </group>
@@ -25,14 +30,20 @@
 
         <item android:id="@+id/share"
               android:title="@string/share"
+            android:icon="@drawable/ic_share_black_24dp"
               />
+        <item android:id="@+id/setting"
+            android:title="@string/setting"
+            android:icon="@drawable/ic_settings_black_24dp"/>
 
         <item android:id="@+id/about_dev"
               android:title="@string/about"
+            android:icon="@drawable/ic_info_black_24dp"
               />
 
         <item android:id="@+id/contribute"
               android:title="@string/contribute"
+            android:icon="@drawable/ic_http_black_24dp"
               />
 
     </group>

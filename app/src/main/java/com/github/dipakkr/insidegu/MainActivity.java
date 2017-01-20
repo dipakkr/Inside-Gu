@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.github.dipakkr.insidegu.Activity.AboutDeveloper;
 import com.github.dipakkr.insidegu.Activity.ContributionActivity;
 import com.github.dipakkr.insidegu.Fragment.NotesFragment;
 
@@ -50,10 +51,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragmentClass = NotesFragment.class;
                 break;
 
+            case R.id.share :
+                Intent shareIntent = new Intent();
+                shareIntent.setAction(Intent.ACTION_SEND);
+                shareIntent.putExtra(Intent.EXTRA_TEXT,"Hey Check my new application");
+                shareIntent.setType("text/plain");
+                startActivity(shareIntent);
+                break;
+
             case R.id.contribute :
                 Intent contributeIntent = new Intent(this, ContributionActivity.class);
                 startActivity(contributeIntent);
                 break;
+
+            case R.id.about_dev :
+                Intent aboutdev = new Intent(this,AboutDeveloper.class);
+                startActivity(aboutdev);
 
             default:
                 fragmentClass = NotesFragment.class;
@@ -71,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         setTitle(item.getTitle());
         return true;
-
     }
 
     @Override

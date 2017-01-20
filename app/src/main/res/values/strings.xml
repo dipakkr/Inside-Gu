@@ -11,5 +11,6 @@
 
     <string name="open">Open drawer</string>
     <string name="close">Close Drawer</string>
+    <string name="setting">Setting</string>
 
 </resources>
