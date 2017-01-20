@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">InsideGu</string>
+
+    <string name="campus_story">Campus Story</string>
+    <string name="notes">Notes</string>
+    <string name="student_club">Student Clubs</string>
+    <string name="GQuasar">GQuasar Events</string>
+    <string name="share">Share</string>
+    <string name="about">About developer</string>
+    <string name="contribute">How to contribute</string>
+
+    <string name="open">Open drawer</string>
+    <string name="close">Close Drawer</string>
+
+</resources>

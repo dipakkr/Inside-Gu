@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp1">
+
+        <item android:id="@+id/storyclub"
+              android:title="@string/campus_story"
+            />
+        <item android:id="@+id/notes"
+              android:title="@string/notes"
+              />
+
+        <item android:id="@+id/clubs"
+              android:title="@string/student_club"
+              />
+        <item
+            android:id="@+id/GQuasar"
+            android:title="@string/GQuasar"
+           />
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/grp2">
+
+        <item android:id="@+id/share"
+              android:title="@string/share"
+              />
+
+        <item android:id="@+id/about_dev"
+              android:title="@string/about"
+              />
+
+        <item android:id="@+id/contribute"
+              android:title="@string/contribute"
+              />
+
+    </group>
+
+</menu>
