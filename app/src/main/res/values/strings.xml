@@ -13,4 +13,8 @@
     <string name="close">Close Drawer</string>
     <string name="setting">Setting</string>
 
+    <string name="contribute_title">How to contribute to this App  : </string>
+    <string name="contribute_body1">\nInsideGu is an Open Source android application.You can find the
+        source code of application at github.</string>
+
 </resources>
