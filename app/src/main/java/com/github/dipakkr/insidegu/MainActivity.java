@@ -13,12 +13,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.github.dipakkr.insidegu.Activity.AboutDeveloper;
 import com.github.dipakkr.insidegu.Activity.ContributionActivity;
+import com.github.dipakkr.insidegu.Activity.DiscussionActivity;
 import com.github.dipakkr.insidegu.Fragment.NotesFragment;
+import com.github.dipakkr.insidegu.Fragment.SettingFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
@@ -43,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = (NavigationView)findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.container,new NotesFragment()).commit();
     }
 
     @Override
@@ -56,6 +62,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.notes :
                 fragmentClass = NotesFragment.class;
+                if(getSupportActionBar()!=null){
+                    getSupportActionBar().setTitle(R.string.notes);
+                }
+                break;
+
+            case R.id.setting :
+                fragmentClass = SettingFragment.class;
+                if(getSupportActionBar()!=null) {
+                    getSupportActionBar().setTitle(R.string.setting);
+                }
+
                 break;
 
             case R.id.share :
@@ -89,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.container,fragment).commit();
         drawerLayout.closeDrawer(GravityCompat.START);
-        setTitle(item.getTitle());
+
         return true;
     }
 
@@ -97,9 +114,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        } else if (fragment != null && fragment.isVisible()) {
-
-            if (backpressedonce) {
+        } else {
+          if (backpressedonce) {
                 finish();
             } else if (!backpressedonce) {
                 Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show();
@@ -112,5 +128,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }, 2000);
             }
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.froum){
+            Intent discussion  = new Intent(this,DiscussionActivity.class);
+            startActivity(discussion);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -25,7 +25,7 @@ import com.github.dipakkr.insidegu.R;
  */
 
 public class NotesFragment extends Fragment {
-    private static final String DRIVE_URL = "https://drive.google.com/drive/folders/0B8hNGz0u0hBCdkk1R1BQeTRrem8?usp=sharing";
+    private static final String DRIVE_URL = "https://www.google.com";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

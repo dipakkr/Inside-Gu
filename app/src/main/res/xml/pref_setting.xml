@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <PreferenceCategory
+       android:title="General Setting">
+
+       <Preference
+           android:title="@string/name"
+           android:summary="Enter Your name"
+           android:icon="@mipmap/ic_people"/>
+   </PreferenceCategory>
+
+</PreferenceScreen>

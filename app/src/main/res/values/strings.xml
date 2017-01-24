@@ -1,4 +1,4 @@
-<resources>
+<resources >
     <string name="app_name">InsideGu</string>
 
     <string name="campus_story">Campus Story</string>
@@ -6,15 +6,23 @@
     <string name="student_club">Student Clubs</string>
     <string name="GQuasar">GQuasar Events</string>
     <string name="share">Share</string>
-    <string name="about">About developer</string>
+    <string name="about">About Us</string>
     <string name="contribute">How to contribute</string>
+    <string name="name">Name</string>
 
     <string name="open">Open drawer</string>
     <string name="close">Close Drawer</string>
     <string name="setting">Setting</string>
+    <string name="my_name">Deepak Kumar</string>
+    <string name="contributers">Contributors</string>
+    <string name="batch">2nd Year(CSE)</string>
+    <string name="team"> Team IRIS</string>
+    <string name="team_name">Galgotias Robotics and Innovation club </string>
+    <string name="froum">Discussion</string>
 
+    <string name="discussion">Discussion Forum</string>
     <string name="contribute_title">How to contribute to this App  : </string>
-    <string name="contribute_body1">\nInsideGu is an Open Source android application.You can find the
-        source code of application at github.</string>
+    <string name="contribute_body1">\nInsideGu is an Open Source android application. You can find the
+        source code of application at github.\n\n <b> https://github.com/dipakkr/Inside-Gu</b> </string>
 
 </resources>
