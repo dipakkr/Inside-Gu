@@ -25,7 +25,9 @@ import com.github.dipakkr.insidegu.R;
  */
 
 public class NotesFragment extends Fragment {
-    private static final String DRIVE_URL = "https://www.google.com";
+
+    private static final String DRIVE_URL = "https://drive.google.com/drive/folders/0B9X8AGd3xH4PSHRvZy0xLVgyb3M?usp=sharing";
+    private boolean t = true;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -55,6 +57,9 @@ public class NotesFragment extends Fragment {
              });
         webView.getSettings().getJavaScriptEnabled();
         webView.loadUrl(DRIVE_URL);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.canGoBack();
+        webView.setFitsSystemWindows(true);
         webView.setDownloadListener(new DownloadListener() {
             @Override
             public void onDownloadStart(String s, String s1, String s2, String s3, long l) {
@@ -66,8 +71,6 @@ public class NotesFragment extends Fragment {
                 downloadManager.enqueue(request);
             }
         });
-
         return rootView;
     }
-
 }

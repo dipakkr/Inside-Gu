@@ -21,8 +21,13 @@
     <string name="froum">Discussion</string>
 
     <string name="discussion">Discussion Forum</string>
-    <string name="contribute_title">How to contribute to this App  : </string>
+    <string name="contribute_title">How to contribute</string>
     <string name="contribute_body1">\nInsideGu is an Open Source android application. You can find the
         source code of application at github.\n\n <b> https://github.com/dipakkr/Inside-Gu</b> </string>
+
+    <string name="discussion_signin_required">You need to sign in to use this feature.</string>
+    <string name="alert_bt_skip">Skip</string>
+    <string name="alert_bt_continue">Continue</string>
+    <string name="hog">Humans of Galgotias</string>
 
 </resources>
